@@ -1,0 +1,345 @@
+000-jump_brass.prog						FAVORITE
+001-africa_saw_brass.prog				FAVORITE
+002-lifes_been_great.prog				FAVORITE
+003-africa_saw_brass_x.prog
+004-electric_eel_bites.prog				BASS
+	lfo time warp & zwarp
+	might could be lead if had tracking generators
+005-noize.prog							?
+	just noise
+006-vca_bells.prog
+	this version is old and out of date (hasn't been opened and saved)
+007-supervariable.prog					FAVORITE
+010-j.prog								?
+	REVIEW?
+011-vca_bells.prog						FAVORITE
+012-trance_perc.prog
+	?? 
+	slightly different from 112/212
+013-vca_bells_sd.prog					MISC 7x or 6x
+	steel drums - name will change
+014-africa_saw_b.prog
+	REVIEW?
+015-virgin_split.prog
+	REVIEW?
+016-virgin_split16.prog
+	REVIEW?
+017-virgin_split_wxy.prog
+	REVIEW?
+020-1420.prog
+	REVIEW?
+021-trance_p.prog
+	not very different from 024
+022-trance_p.prog
+	not very different from 024
+023-jump_brass.prog
+024-trance_p2.prog						PAD 26
+	rename trance_perc pad
+	from superbooth - pretty basic synth sound - starting point?
+	fixed it
+	clips (core vca gain at 8)
+025-virgin_split_wxy2.prog
+026-clav_.prog							PIANO 56
+	clav?
+027-clav2_gro.prog						PIANO 55
+	grover, synth clav, a bit of a pad
+	video game soundtrack
+030-sandbox_wxy.prog
+031-sandbox_wxy.prog
+032-lifes_been_great.prog
+	??
+033-1434.prog
+	nothing
+034-trance_p.prog
+	something from superbooth
+035-z_init.prog
+	nothing
+036-t.prog
+	nothing
+037-supervar.prog						MISC/LEADS 60
+	supervar high gain 
+	(J demo does use both)
+	copied supervar to recreate
+	7,7 -> 4.6,9.4
+	start at bandpass
+	(tried starting halfway to x filter instead)
+	(a little erratic with quiet voices -- try again after voice card rework)
+041-z_init.prog							70
+	We will keep a z_init patch at 040 to use as default
+	don't copy name if it's z_init and at 70
+	user can modify
+	init will automatically copy from here 070
+	eventually user can change init patch location
+	could have several init patches 70,71,72,73
+042-t.prog
+043-lets_drive.prog
+044-tlfo.prog
+045-virgin_split.prog
+	in iso mode with only patch B
+	this patch will not play anything
+	may need to debug this
+	final stage gain doesn't pull in properly
+	suspect lowest_patch_for_vca_idx in mcp.c in iso mode
+	fix iso->split
+
+046-tlfo.prog
+	not that interesting
+047-sandbox_wx.prog
+	-> bubble chirp
+	bubble popping sound effect
+	slightly tonal elements - like the weirdest patch
+	J modified to make interesting
+050-clav_mb.prog						PIANO 57
+	boddicker 
+051-supervar.prog
+	retro prog PWM lead
+	prog rock lead
+	hyper pop bass
+	emerson lake palmer
+052-trance_pe.prog
+	after adjusting -> slow burn pad
+	almost in the air tonight
+053-jump_brass_timewarp.prog			BRASS 31
+	after adjusting -> soft mellow brass; saffron brass
+	copy to 252
+054-tlfo_tz_warp.prog
+	CHECK LATER
+055-tlfo_tz_warp.prog
+	CHECK LATER
+056-tlfo_tz_warp.prog
+	CHECK LATER
+057-super.prog
+	"stupid"
+060-wait4u.prog							PAD 20
+	-> basic stringpad
+	boddicker version, quintessential
+	waiting for a girl like you
+	matches 160-wait4u except for fsg
+	C#5 F5 Bb5
+	C5 Eb5 Ab5
+	Bb2 Bb3 C#4 F4
+	Ab2 Ab3 C4 Eb4
+061-wait4u.prog							PAD 21
+	jab version (a little dark?)
+	basic synth strings or pad -> "dark stringpad"
+	waiting for a girl like you
+	trying to keep because it's primative 
+	matches 161-wait4u except for fsg
+
+062-jump_b.prog							LEAD 74
+	rubber band lead
+	not great
+063-pwt.prog
+	?
+064-wait4u_bell.prog
+	became melrose pad
+	from night with joseph heywood
+065-fancy.prog							BASS 544
+	-> just like this
+	drop it low
+	Pick it up
+	inspired by Iggy Azalea I'm so Fancy
+	from night with joseph heywood
+	has been requested as a preset
+066-fan.prog							YES
+	separate ways E E B E F# E B E (2nd E is diff octave)
+	"If he ever hurts you"
+	bright Jupiter sound
+	should be refined
+067-trance_p.prog
+	slightly different than 24 now 526
+	not sure if anything here
+	"not monstrously different"
+070-mamma_mia.prog						PIANO
+	squishy Neon keys
+	made for fun first time ricardo was there
+	synth ep
+	not much like mamma mia
+	band pass filter
+	bright bubbly
+071-pmp_v2.prog
+	profile mod piano - jab first attempt
+	synclaviar sound
+	profile envelope backwards
+	don't need this one
+072-pmp_v3.prog							PIANO
+	tinny
+	vintage digital ?
+073-pmp_v4.prog							PIANO & FAVORITES
+	jab version -> P mod piano v4
+	2 envelopes: meow + kiss
+	will be in 2 places
+	gcore and gfs = 6.25 8  << more than 13
+074-pmp_v4a.prog
+075-pmp_v4a2.prog
+076-pmp_v4_ric.prog
+077-pmp_v4_ric_solo.prog				MISC 75
+	differs from JAB v4 as follows:
+	gcore and gfs = 6.25 8 -> 7 5.4 (gfs not migrated will be 7?)
+	env2 -> vcf.freq 28 -> 24
+	unison: 2
+	midi_lch, hch: 1 - 12  -> MPE (with bend +3/+4) 
+
+
+100-jump_brass.prog
+101-africa_saw_brass.prog
+102-lifes_been_great.prog
+103-trance_p4.prog
+104-pmp_v5.prog
+	not an improvement on pmp_v4
+
+105-trance_p4p.prog
+	WACKY
+106-africa_saw_brass.prog
+107-supervariable.prog
+110-test_0723.prog
+	not interesting
+111-vca_bells.prog
+112-trance_perc.prog					MISC/PERC 65
+	-> soft perc
+	same as 212
+	jab just made lots of changes including x^3
+	copied back to 012
+113-pad.prog
+	freaky pad
+	slightly interesting
+	<not using yet>
+114-wait4u_bell.prog						
+	different from 64-wait4u_bell
+	split bells & strings -
+	the sound that introduced relic sonicstate 2017
+	-> relic bell strings
+115-virgin_split.prog
+116-melrose_pump.prog
+	superceded by 146
+	patch A probably a copy of something
+	patch B became great version for ricardo's demo
+117-poker_var.prog						LEAD 67
+	Poker Face
+	love nobody
+	bluff
+	Ace High
+	GOOD ONE
+120-vca_bells_mb.prog
+	REVIEW LATER
+121-trance_p.prog
+	close'ish to 112
+	REVIEW LATER?
+122-trance_p.prog
+	close'ish to 121
+	REVIEW LATER?
+123-fancy.prog							LEAD 64
+	-> classic lead ?
+	boring but use it 
+	same as 223-
+124-sin_test.prog
+	joseph heywood bass
+	used really big speakers
+	layered
+125-sin_test.prog						MISC/INIT 71
+	-> z_init_sin
+	JAB sin wave patch ???
+	init 71 ?
+	need track in perfect spot
+	will use 6db pad - 12db is if you want to use 2 VCOs
+	more perfect sin at 12db but we don't want an init patch that encourages bleed thru
+	<review if other settings are legit for init>
+126-sin_test.prog							BASS 4x
+	might be our best bass patch (iso)
+	-> Rose Bass
+	precursor to heywood melrose bass
+127-sin_test.prog							BASS 4x
+	"melrose bass"
+	think this was the final version of joseph heywood bass
+	used really big speakers
+	layered (zone mode LAYER)
+	had stereo_spread = 200 JAB removing to 0 for now
+130-jump_brass_s.prog
+	steve early version
+131-jump_brass_sj.prog
+	steve early version
+132-bubble_warp_brass.prog				BRASS
+	different, shows time warp
+133-raindrop.prog						?
+	sound effect
+	SAVE REVIEW
+134-jump_brass_sb.prog
+	SKIP - not as good as 135 137
+135-jump_brass_sb.prog					BRASS
+	-> bright analog brass
+	porcaro + boddicker
+	BEST of these
+	glide_time 
+136-jump_brass_sb.prog
+	SKIP - only one vco
+137-jump_brass_sb.prog
+	rlb version
+
+140-z_init.prog
+141-vca_bells.prog
+142-lofi_synthetic_brass.prog				BRASS
+143-lets_drive.prog
+	matches 243 - differs from 043
+	REVIEW LATER?
+144-rt.prog
+145-rt_yum.prog
+	same as 144-rt
+146-melrose_pump_bass.prog					27 & favorite
+	melrose pad split
+	developed for Ricardo's demo
+	patch B similar to 116
+147-rt_yum.prog
+150-melrose_pump_bass.prog
+	same as 146
+151-melrose_pump_bass.prog
+	same as 146
+152-bird_bass.prog							BASS 42
+	BCD BCDG 1 second each until last 2
+	same as 252
+153-lofi_synthetic_brass2.prog
+	-> hifi synthetic brass
+	less lofi than 142
+	probably not interesting enough
+
+160-wait4u.prog
+	matches 60-wait4u except for fsg
+161-wait4u.prog
+	matches 61-wait4u except for fsg
+162-wait4u_3.prog
+	very cinematic -> Cinematic Fizz
+	mb version from September
+	jab changing to make it more different
+	sem filter, bring in a little sprinkle
+	copy to 262 backup
+163-wait4u_4.prog
+	mb/jab changes from September -> weird at end of note
+
+171-trance_p2.prog
+	REVIEW LATER?
+172-trance_p3.prog
+	REVIEW LATER?
+173-trance_p3.prog
+	REVIEW LATER?
+176-pmp_v4_ric.prog
+	same as 076-pmp_v4_ric.prog
+177-pmp_v4_ric_solo.prog
+	same as 077-pmp_v4_ric_solo.prog
+
+======================================
+200's are mostly just copies/backups
+======================================
+
+200-jump_brass.prog
+201-africa_saw_brass_old.prog
+202-lifes_been_great.prog
+211-vca_bells.prog
+212-trance_perc.prog
+	same as 112
+215-virgin_split.prog
+222-trance_p.prog
+223-fancy.prog
+	same as 123
+242-lofi_synthetic_brass.prog
+243-lets_drive.prog
+	same as 143
+252-bird_bass.prog

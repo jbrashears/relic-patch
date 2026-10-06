@@ -1,0 +1,1167 @@
+// progutil format 1; program ID: 054
+const synth_program_t program_054 = {
+.patch[0] = {
+	.vco[0] = {
+		.wave             = SAW,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = on,
+		.freq             = 0,
+		.detune           = +1,
+		.pulse_width      = 122,
+		.mod[0] = (off, LFO1, 1st, +33),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, LFO2, off, -19),
+		.mod[4] = (off, off, off, 0),
+	},
+	.vco[1] = {
+		.wave             = SAW,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = off,
+		.freq             = 0,
+		.detune           = +24,
+		.pulse_width      = 144,
+		.mod[0] = (off, off, off, 0),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, LFO2, off, +25),
+		.mod[4] = (off, off, off, 0),
+	},
+	.vco_common = {
+		.vco2_hard_sync_to_vco1 = off,
+		.glide_time       = 0x0000, /* stored word */
+		.bend_range_down  = 0,
+		.bend_range_up    = 0,
+		.vco_detune       = 0,
+		.pw_detune        = 0,
+	},
+	.vca = {
+		.pre_filt_pad     = 0,
+		.vco_mix          = 121,
+		.noise            = 0,
+		.pre_filt_gain    = 63,
+		.core_vca_gain    = 124,
+		.final_stage_gain = 128,
+		.stereo_spread    = 0,
+		.mod[0] = (off, off, 0),
+		.mod[1] = (off, off, 0),
+		.mod[2] = (off, off, 0),
+		.mod[3] = (off, off, 0),
+	},
+	.vca_common = {
+		.vca_gain_detune  = 0,
+		.vca_trim         = 140,
+	},
+	.vcf = {
+		.profile_mode     = MODERN,
+		.cutoff           = 0x7c00, /* stored word */
+		.resonance        = 64,
+		.profile          = 149,
+		.bandwidth        = 123,
+		.mod[0] = (VCF.FREQ, BND, 20st, +129),
+		.mod[1] = (VCF.FREQ, ENV3, 16st, +34),
+		.mod[2] = (VCF.FREQ, KEY, 16st, 0),
+		.mod[3] = (off, off, off, 0),
+	},
+	.vcf_common = {
+		.vcf_detune       = 0,
+	},
+	.env[0] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0000, /* stored word */
+		.attack           = 0x06a4, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x48a0, /* stored word */
+		.sustain          = 202,
+		.release          = 0x65da, /* stored word */
+		.z_warp           = -1,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[1] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0000, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[2] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0000, /* stored word */
+		.attack           = 0x1e78, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x35e0, /* stored word */
+		.sustain          = 248,
+		.release          = 0x3fe0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = +8,
+		.z_modsrc         = KEY,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[3] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0000, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env_common = {
+		.env_detune       = 0,
+	},
+	.lfo[0] = {
+		.wave             = SINE2P,
+		.on               = on,
+		.sync             = on,
+		.gsync            = off,
+		.speed            = 0x47f0, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = +102,
+		.z_warp           = +195,
+		.time_warp        = -8,
+		.shape_warp       = 0,
+		.z_modsrc         = VEL,
+		.time_modsrc      = VEL,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[1] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x3ea0, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[2] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[3] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo_common = {
+		.lfo_detune       = 0,
+	},
+	.alo = {
+		.en               = on,
+		.monophonic_en    = off,
+		.legato_en        = off,
+		.unison_en        = off,
+		.priority_mode    = LAST,
+		.low_key_link     = MIN,
+		.high_key_link    = MAX,
+		.unison_multiplier = 1,
+		.physical_voice_core_limit = 255,
+		.midi_ch          = 255,
+		.midi_lch         = 255,
+		.midi_hch         = 255,
+		.low_key          = -1,
+		.high_key         = -1,
+		.cycle_mode       = 0x3 /*UNKNOWN*/,
+		.rematch          = on,
+		.patchmap_len     = 15,
+		.patchmap = {
+			0xff, 0xff, 0xc4, 0xff, 
+		},
+		.virtual_output   = 0xc0 /*UNKNOWN*/,
+		.pan_avc          = 0,
+		.pan_avc_cnt      = 0,
+	},
+	.arp = {
+		.direction        = UP,
+		.run              = off,
+		.octave_multiplier = 0,
+		.division         = 0,
+		.gate             = 0,
+	},
+	.sequencer = {
+		.division         = 0,
+		.gate             = 0,
+		.staccato         = 0,
+		.accent           = 0,
+	},
+	.idx = 0,
+},
+.patch[1] = {
+	.vco[0] = {
+		.wave             = PULSE,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = off,
+		.freq             = 0,
+		.detune           = 0,
+		.pulse_width      = 117,
+		.mod[0] = (off, off, off, 0),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+		.mod[4] = (off, LFO2, off, -25),
+	},
+	.vco[1] = {
+		.wave             = PULSE,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = on,
+		.freq             = -24,
+		.detune           = 0,
+		.pulse_width      = 125,
+		.mod[0] = (off, LFO2, 10st, +88),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+		.mod[4] = (off, LFO2, off, 0),
+	},
+	.vco_common = {
+		.vco2_hard_sync_to_vco1 = off,
+		.glide_time       = 0x0000, /* stored word */
+		.bend_range_down  = 0,
+		.bend_range_up    = 0,
+		.vco_detune       = 0,
+		.pw_detune        = 0,
+	},
+	.vca = {
+		.pre_filt_pad     = 0,
+		.vco_mix          = 121,
+		.noise            = 0,
+		.pre_filt_gain    = 63,
+		.core_vca_gain    = 141,
+		.final_stage_gain = 128,
+		.stereo_spread    = 0,
+		.mod[0] = (off, off, 0),
+		.mod[1] = (off, off, 0),
+		.mod[2] = (off, off, 0),
+		.mod[3] = (off, off, 0),
+	},
+	.vca_common = {
+		.vca_gain_detune  = 0,
+		.vca_trim         = 140,
+	},
+	.vcf = {
+		.profile_mode     = MODERN,
+		.cutoff           = 0x4b00, /* stored word */
+		.resonance        = 141,
+		.profile          = 152,
+		.bandwidth        = 103,
+		.mod[0] = (VCF.FREQ, BND, 20st, +122),
+		.mod[1] = (VCF.FREQ, ENV3, 16st, +35),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+	},
+	.vcf_common = {
+		.vcf_detune       = 0,
+	},
+	.env[0] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x0708, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x3130, /* stored word */
+		.sustain          = 259,
+		.release          = 0x4a40, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[1] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[2] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x1e78, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x35e0, /* stored word */
+		.sustain          = 168,
+		.release          = 0x3b80, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[3] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env_common = {
+		.env_detune       = 0,
+	},
+	.lfo[0] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[1] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = on,
+		.gsync            = off,
+		.speed            = 0x1644, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = +1,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[2] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[3] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo_common = {
+		.lfo_detune       = 0,
+	},
+	.alo = {
+		.en               = on,
+		.monophonic_en    = off,
+		.legato_en        = off,
+		.unison_en        = off,
+		.priority_mode    = LAST,
+		.low_key_link     = MIN,
+		.high_key_link    = MAX,
+		.unison_multiplier = 1,
+		.physical_voice_core_limit = 255,
+		.midi_ch          = 255,
+		.midi_lch         = 255,
+		.midi_hch         = 255,
+		.low_key          = -1,
+		.high_key         = -1,
+		.cycle_mode       = 0x3 /*UNKNOWN*/,
+		.rematch          = on,
+		.patchmap_len     = 15,
+		.patchmap = {
+			0xff, 0xff, 0xc4, 0xff, 
+		},
+		.virtual_output   = 0xc0 /*UNKNOWN*/,
+		.pan_avc          = 0,
+		.pan_avc_cnt      = 0,
+	},
+	.arp = {
+		.direction        = UP,
+		.run              = off,
+		.octave_multiplier = 0,
+		.division         = 0,
+		.gate             = 0,
+	},
+	.sequencer = {
+		.division         = 0,
+		.gate             = 0,
+		.staccato         = 0,
+		.accent           = 0,
+	},
+	.idx = 1,
+},
+.patch[2] = {
+	.vco[0] = {
+		.wave             = PULSE,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = on,
+		.freq             = +24,
+		.detune           = 0,
+		.pulse_width      = 128,
+		.mod[0] = (off, off, off, 0),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+		.mod[4] = (off, off, off, 0),
+	},
+	.vco[1] = {
+		.wave             = SAW,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = off,
+		.freq             = 0,
+		.detune           = +13,
+		.pulse_width      = 128,
+		.mod[0] = (off, off, off, 0),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+		.mod[4] = (off, off, off, 0),
+	},
+	.vco_common = {
+		.vco2_hard_sync_to_vco1 = off,
+		.glide_time       = 0x0000, /* stored word */
+		.bend_range_down  = 0,
+		.bend_range_up    = 0,
+		.vco_detune       = 0,
+		.pw_detune        = 0,
+	},
+	.vca = {
+		.pre_filt_pad     = 0,
+		.vco_mix          = 0,
+		.noise            = 0,
+		.pre_filt_gain    = 63,
+		.core_vca_gain    = 120,
+		.final_stage_gain = 128,
+		.stereo_spread    = 200,
+		.mod[0] = (off, off, 0),
+		.mod[1] = (off, off, 0),
+		.mod[2] = (off, off, 0),
+		.mod[3] = (off, off, 0),
+	},
+	.vca_common = {
+		.vca_gain_detune  = 0,
+		.vca_trim         = 140,
+	},
+	.vcf = {
+		.profile_mode     = MODERN,
+		.cutoff           = 0xc6e0, /* stored word */
+		.resonance        = 0,
+		.profile          = 120,
+		.bandwidth        = 120,
+		.mod[0] = (off, off, 20st, 0),
+		.mod[1] = (off, off, 16st, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+	},
+	.vcf_common = {
+		.vcf_detune       = 0,
+	},
+	.env[0] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x4460, /* stored word */
+		.sustain          = 160,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[1] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[2] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[3] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env_common = {
+		.env_detune       = 0,
+	},
+	.lfo[0] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[1] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[2] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[3] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo_common = {
+		.lfo_detune       = 0,
+	},
+	.alo = {
+		.en               = off,
+		.monophonic_en    = off,
+		.legato_en        = off,
+		.unison_en        = off,
+		.priority_mode    = LAST,
+		.low_key_link     = MIN,
+		.high_key_link    = MAX,
+		.unison_multiplier = 1,
+		.physical_voice_core_limit = 255,
+		.midi_ch          = 255,
+		.midi_lch         = 255,
+		.midi_hch         = 255,
+		.low_key          = -1,
+		.high_key         = -1,
+		.cycle_mode       = 0x3 /*UNKNOWN*/,
+		.rematch          = on,
+		.patchmap_len     = 15,
+		.patchmap = {
+			0xff, 0xff, 0xc4, 0xff, 
+		},
+		.virtual_output   = 0xc0 /*UNKNOWN*/,
+		.pan_avc          = 0,
+		.pan_avc_cnt      = 0,
+	},
+	.arp = {
+		.direction        = UP,
+		.run              = off,
+		.octave_multiplier = 0,
+		.division         = 0,
+		.gate             = 0,
+	},
+	.sequencer = {
+		.division         = 0,
+		.gate             = 0,
+		.staccato         = 0,
+		.accent           = 0,
+	},
+	.idx = 2,
+},
+.patch[3] = {
+	.vco[0] = {
+		.wave             = PULSE,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = on,
+		.freq             = +24,
+		.detune           = 0,
+		.pulse_width      = 128,
+		.mod[0] = (off, off, off, 0),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+		.mod[4] = (off, off, off, 0),
+	},
+	.vco[1] = {
+		.wave             = SAW,
+		.bend_en          = on,
+		.key_track_en     = on,
+		.glide_en         = on,
+		.on               = off,
+		.freq             = 0,
+		.detune           = +13,
+		.pulse_width      = 128,
+		.mod[0] = (off, off, off, 0),
+		.mod[1] = (off, off, off, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+		.mod[4] = (off, off, off, 0),
+	},
+	.vco_common = {
+		.vco2_hard_sync_to_vco1 = off,
+		.glide_time       = 0x0000, /* stored word */
+		.bend_range_down  = 0,
+		.bend_range_up    = 0,
+		.vco_detune       = 0,
+		.pw_detune        = 0,
+	},
+	.vca = {
+		.pre_filt_pad     = 0,
+		.vco_mix          = 0,
+		.noise            = 0,
+		.pre_filt_gain    = 63,
+		.core_vca_gain    = 120,
+		.final_stage_gain = 128,
+		.stereo_spread    = 200,
+		.mod[0] = (off, off, 0),
+		.mod[1] = (off, off, 0),
+		.mod[2] = (off, off, 0),
+		.mod[3] = (off, off, 0),
+	},
+	.vca_common = {
+		.vca_gain_detune  = 0,
+		.vca_trim         = 140,
+	},
+	.vcf = {
+		.profile_mode     = MODERN,
+		.cutoff           = 0xc6e0, /* stored word */
+		.resonance        = 0,
+		.profile          = 120,
+		.bandwidth        = 120,
+		.mod[0] = (off, off, 20st, 0),
+		.mod[1] = (off, off, 16st, 0),
+		.mod[2] = (off, off, off, 0),
+		.mod[3] = (off, off, off, 0),
+	},
+	.vcf_common = {
+		.vcf_detune       = 0,
+	},
+	.env[0] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x4460, /* stored word */
+		.sustain          = 160,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[1] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[2] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env[3] = {
+		.on               = off,
+		.retrig_zero      = off,
+		.repeat           = off,
+		.delay            = 0x0064, /* stored word */
+		.attack           = 0x07d0, /* stored word */
+		.hold             = 0x0064, /* stored word */
+		.decay            = 0x07d0, /* stored word */
+		.sustain          = 280,
+		.release          = 0x07d0, /* stored word */
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.time_warp_dst    = 0,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.env_common = {
+		.env_detune       = 0,
+	},
+	.lfo[0] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[1] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[2] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo[3] = {
+		.wave             = PULSE,
+		.on               = off,
+		.sync             = off,
+		.gsync            = off,
+		.speed            = 0x0064, /* stored word */
+		.speed_ratio      = 0,
+		.shape            = 0,
+		.z_warp           = 0,
+		.time_warp        = 0,
+		.shape_warp       = 0,
+		.z_modsrc         = off,
+		.time_modsrc      = off,
+		.shape_modsrc     = off,
+		.mod_stack = {
+			0x00, 0x00, 0x00, 0x00, 
+		},
+	},
+	.lfo_common = {
+		.lfo_detune       = 0,
+	},
+	.alo = {
+		.en               = off,
+		.monophonic_en    = off,
+		.legato_en        = off,
+		.unison_en        = off,
+		.priority_mode    = LAST,
+		.low_key_link     = MIN,
+		.high_key_link    = MAX,
+		.unison_multiplier = 1,
+		.physical_voice_core_limit = 255,
+		.midi_ch          = 255,
+		.midi_lch         = 255,
+		.midi_hch         = 255,
+		.low_key          = -1,
+		.high_key         = -1,
+		.cycle_mode       = 0x3 /*UNKNOWN*/,
+		.rematch          = on,
+		.patchmap_len     = 15,
+		.patchmap = {
+			0xff, 0xff, 0xc4, 0xff, 
+		},
+		.virtual_output   = 0xc0 /*UNKNOWN*/,
+		.pan_avc          = 0,
+		.pan_avc_cnt      = 0,
+	},
+	.arp = {
+		.direction        = UP,
+		.run              = off,
+		.octave_multiplier = 0,
+		.division         = 0,
+		.gate             = 0,
+	},
+	.sequencer = {
+		.division         = 0,
+		.gate             = 0,
+		.staccato         = 0,
+		.accent           = 0,
+	},
+	.idx = 3,
+},
+.patch_common = {
+	.clock = {
+		.tempo            = 120,
+	},
+	.alo = {
+		.solo             = off,
+		.zone_mode        = ISO,
+		.octave_shift     = 0,
+		.transpose        = 0,
+		.split_point = { 73, 72, 84 },
+	},
+	.mix = {
+		.vcmux_cnt_for_ch = {
+			0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 0x01, 
+		},
+		.layer_blend      = 128,
+	},
+},
+.active_patch_idx = 0,
+.name = "tlfo_tz_warp",
+.info[0] = "<3vP 5vP>",
+.info[1] = "",
+.sequence_aux[0] = {
+	.data = {
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	},
+},
+.sequence_aux[1] = {
+	.data = {
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	},
+},
+.sequence[0] = {
+	.data = {
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	},
+},
+.sequence[1] = {
+	.data = {
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
+	},
+},
+.crc = 0xc0c0c0c0, /* placeholder sentinel */
+};
+

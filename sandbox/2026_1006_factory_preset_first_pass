@@ -1,0 +1,130 @@
+program patch notes 2026.1006
+
+setting up in 500 bank
+
+sections:
+0 faves
+1 faves
+2 pad/string
+3 brass
+4 bass
+5 piano
+6 misc: lead
+7 misc: init percussion fx
+
+============================================================
+COUNT:                         FREE SPOTS
+8    FAVES (16 total)              8
+8    PAD/STRING                    0
+5+1  brass                         2
+5    bass                          3
+6    piano                         2
+8    misc: lead                    0
+4+2  misc: init percussion fx      2
+---                               --
+47                                17
+============================================================
+
+FAVES
+=====
+00 jump brass
+01 africa saw brass
+02 lifes been great
+03
+04 p mod piano
+05
+06
+07 supervariable
+11 vca bells
+12 melrose pad split
+13
+14
+15 Heavy Rotation
+16
+17
+
+PAD/STRING
+==========
+20 basic stringpad (mb)
+21 dark stringpad (jab)
+22 slow burn pad
+23 cinematic fizz (may be too close to stringpads 20 & 21)
+24 relic bells & strings
+25 virgin split 
+26 trans perc pad 
+27 melrose pad  (same as in favorites rn)
+     ^ keep here as pad but add split and move to favorites
+
+BRASS
+=====
+30 bright analog brass
+31 saffron brass
+32 lofi synthetic brass
+33 hifi synthetic brass (?)
+34 bubble warp brass
+35
+36 If he ever hurts you (not brass)
+37
+
+BASS
+====
+40 Bird Bass
+41 Melrose bass
+42 rose bass
+43 electric eel bites (check zwarp - click lfo2 tw)
+44 just like this
+45
+46
+47
+
+PIANO
+=====
+50 p mod piano (same as 504)
+51
+52
+53 p mod piano v3 (tinny)
+54 squishy neon keys
+55 synth-clav-gn
+56 clav?
+57 clav-mb
+
+MISC/LEAD
+=========
+60 supervar high gain
+61 vca bells SD steel drum (name tbd)
+62 lets drive
+63 prog rock lead
+64 classic lead (may need work?)
+65 soft perc
+66 bubble chirp
+67 love nobody (poker face var)
+
+MISC/INIT/PERC/FX
+=================
+70 z_init
+71 z_init_sin
+72 <reserve for init>
+73 <reserve for init>
+74 rubber band lead (stupid or needs work?)
+75 pmp v4 solo
+76
+77
+
+
+Note:
+if there is a probably pulling in lfo time warp ? (zwarp?) when loading patches, we need to check any patch that has that set
+
+00 jump brass
+	gcore and gfs = 6,7 (141, 161) (should be 140 -> 6)  143/20 - 1
+
+01 africa saw brass
+	gcore and gfs = 6,7 (141 161)
+
+02 lifes been great
+	gcore and gfs = 6.25,8.75 (143, 196)
+
+07 supervariable
+	gcore and gfs = 7,7 (162, 162)
+
+11 vca bells
+	gcore and gfs = 5.5, 8 with 12db pad
